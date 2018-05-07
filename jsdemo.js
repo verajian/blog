@@ -11,18 +11,12 @@ if (fs.existsSync("./" + dirName)) {
     process.chdir("./" + dirName) // cd $1
     fs.mkdirSync('css') // mkdir css
     fs.mkdirSync('js') // mkdir js
-    var html = `
-    <!DOCTYPE>
-    <title>Hello</title>
-    <h1>Hi</h1>
-    `
-    var css = `
-    h1{color: red;}
-    `
-    var js = `
-    var string = "Hello World"
-    alert(string)
-    `
+    var html = `<!DOCTYPE>
+<title>Hello</title>
+<h1>Hi</h1>`
+    var css = `h1{color: red;}`
+    var js = `var string = "Hello World"
+alert(string)`
     fs.writeFileSync("./index.html", html)
     fs.writeFileSync("css/style.css", css)
     fs.writeFileSync("./js/main.js", js)
