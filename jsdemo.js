@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+
+var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
+
+if (fs.existsSync("./" + dirName)) {
+    return
+} else {
+    fs.mkdirSync("./" + dirName) // mkdir $1
+    process.chdir("./" + dirName) // cd $1
+    fs.mkdirSync('css') // mkdir css
+    fs.mkdirSync('js') // mkdir js
+    var html = `
+    <!DOCTYPE>
+    <title>Hello</title>
+    <h1>Hi</h1>
+    `
+    var css = `
+    h1{color: red;}
+    `
+    var js = `
+    var string = "Hello World"
+    alert(string)
+    `
+    fs.writeFileSync("./index.html", t)
+    fs.writeFileSync("css/style.css", css)
+    fs.writeFileSync("./js/main.js", js)
+}
