@@ -4,7 +4,7 @@ var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
 
-if (fs.existsSync("./" + dirName)) {
+if (fs.existsSync("./" + dirName) || dirName == '') {
     return
 } else {
     fs.mkdirSync("./" + dirName) // mkdir $1
