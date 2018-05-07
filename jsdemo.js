@@ -23,7 +23,7 @@ if (fs.existsSync("./" + dirName)) {
     var string = "Hello World"
     alert(string)
     `
-    fs.writeFileSync("./index.html", t)
+    fs.writeFileSync("./index.html", html)
     fs.writeFileSync("css/style.css", css)
     fs.writeFileSync("./js/main.js", js)
 }
